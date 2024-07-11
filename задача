@@ -1,0 +1,44 @@
+заданиче 9.41
+# Получаем название футбольного клуба от пользователя
+club_name = input("Laguna: ")
+
+# Печатаем название столбиком
+for letter in club_name:
+    print(letter)
+задание 9.72
+sentence = input("Введите предложение: ")
+words = sentence.split()
+if len(words) > 3:
+    print("Число слов в предложении больше трех.")
+else:
+    print("Число слов в предложении три или меньше.")
+Задание 10.41
+def factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n * factorial(n - 1)
+n = int(input("Введите натуральное число: "))
+if n < 1:
+    print("Введите натуральное число больше нуля.")
+else:
+     print(f"Факториал числа {n} равен {factorial(n)}")
+задание 10.22
+def max_of_two(a, b):
+    if a > b:
+        return a
+        else:
+        return b
+def max_of_six(a, b, c, d, e, f):
+    max1 = max_of_two(a, b)
+    max2 = max_of_two(max1, c)
+    max3 = max_of_two(max2, d)
+    max4 = max_of_two(max3, e)
+    final_max = max_of_two(max4, f)
+    return final_max
+numbers = []
+for i in range(6):
+    num = float(input(f"Введите число {i+1}: "))
+    numbers.append(num)
+maximum = max_of_six(numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5])
+print(f"Максимальное из введенных чисел: {maximum}")
